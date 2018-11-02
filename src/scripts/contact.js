@@ -15,7 +15,7 @@ class Contact {
   }
 }
 
-
+// Creates a new instance of Contact using input from user and returns the values
 const createContact = () => {
   let newContact = new Contact ({
     firstName: document.querySelector(".first_name").value,
@@ -27,7 +27,7 @@ const createContact = () => {
     state: document.querySelector("#state").value,
     zipCode: document.querySelector("#zip_code").value
   })
-  console.log(newContact)
+  // console.log(newContact)
   return newContact
 }
 
