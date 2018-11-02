@@ -1,6 +1,18 @@
 // A ContactCollection component that loads existing contacts from storage, and saves new ones. Each new contact should have an auto-generated
 // identifier.
 
+// Posts input to database
+const postToDatabase = (contact) => {
+  fetch("http://localhost:3000/contacts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(contact)
+  })
+}
+
+// Fetches all data from database (contacts.json) and adds the results to the DOM
 const getAllFromDatabase = () => {
   fetch("http://localhost:3000/contacts", {
     headers: {
@@ -16,18 +28,8 @@ const getAllFromDatabase = () => {
         <p>${item.address2}</p>
         <p>${item.city}, ${item.state} ${item.zipCode}</p>`)
       })
-      console.table(data)
+      // console.table(data)
     })
-}
-
-const postToDatabase = (contact) => {
-  fetch("http://localhost:3000/contacts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(contact)
-  })
 }
 
 export { postToDatabase, getAllFromDatabase }
