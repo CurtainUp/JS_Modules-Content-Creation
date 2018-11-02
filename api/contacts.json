@@ -2,14 +2,14 @@
   "contacts": [
     {
       "id": 1,
-      "first_name": "",
-      "last_name": "",
-      "phone_number": "",
-      "address_1": "",
-      "address_2": "",
+      "firstName": "",
+      "lastName": "",
+      "phoneNumber": "",
+      "address1": "",
+      "address2": "",
       "city": "",
       "state": "",
-      "zip_code": ""
+      "zipCode": ""
     },
     {
       "firstName": "q",
@@ -21,6 +21,17 @@
       "state": "q",
       "zipCode": "q",
       "id": 2
+    },
+    {
+      "firstName": "o",
+      "lastName": "o",
+      "phoneNumber": "o",
+      "address1": "o",
+      "address2": "o",
+      "city": "o",
+      "state": "o",
+      "zipCode": "o",
+      "id": 3
     }
   ]
 }
