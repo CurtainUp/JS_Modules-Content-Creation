@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Browserify Boilerplate</title>
+    <title>inTouch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
+    <fieldset>
+        <label for="first_name">First Name:</label>
+        <input class="first_name" type=text>
+    </fieldset>
+
+    <fieldset>
+        <label for="last_name">Last Name:</label>
+        <input class="last_name" type=text>
+    </fieldset>
+
+    <!-- look up phone number input template -->
+    <fieldset>
+        <label for="phone_number">Phone Number:</label>
+        <input class="phone_number" type=text>
+    </fieldset>
+
+    <fieldset>
+        <label for="address">Address:</label>
+        <fieldset>
+            <input class="address" id="address_1" placeholder="Address Line 1" type=text>
+        </fieldset>
+        <fieldset>
+            <input class="address" id="address_2" placeholder="Address Line 2" type=text>
+        </fieldset>
+        <fieldset>
+            <input class="address" id="city" placeholder="City" type=text>
+        </fieldset>
+        <!-- Add dropdown state selection -->
+        <fieldset>
+            <input class="address" id="state" placeholder="State" type=text>
+        </fieldset>
+        <fieldset>
+            <input class="address" id="zip_code" placeholder="Zip Code" type=text>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <button id="save_button">Save Contact</button>
+    </fieldset>
+    <fieldset>
+        <button id="get_button">Get Contacts</button>
+    </fieldset>
+
+
+
     <article class="output">
 
     </article>
 
     <script src="bundle.js"></script>
 </body>
+
 </html>
