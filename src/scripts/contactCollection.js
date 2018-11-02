@@ -3,12 +3,21 @@
 
 const getAllFromDatabase = () => {
   fetch("http://localhost:3000/contacts", {
-  headers: {
-    "Content-Type": "application/json"
-  },
-}).then(response => response.json())
-  .then(data => {
-    console.table(data)})
+    headers: {
+      "Content-Type": "application/json"
+    },
+  }).then(response => response.json())
+    .then(data => {
+      data.forEach((item) => {
+      $(".output").append(
+        `<p>${item.firstName} ${item.lastName}</p>
+        <p>${item.phoneNumber}</p>
+        <p>${item.address1}</p>
+        <p>${item.address2}</p>
+        <p>${item.city}, ${item.state} ${item.zipCode}</p>`)
+      })
+      console.table(data)
+    })
 }
 
 const postToDatabase = (contact) => {
@@ -21,4 +30,4 @@ const postToDatabase = (contact) => {
   })
 }
 
-export {postToDatabase, getAllFromDatabase}
+export { postToDatabase, getAllFromDatabase }

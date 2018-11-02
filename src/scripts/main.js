@@ -1,6 +1,7 @@
 import {postToDatabase, getAllFromDatabase} from "./contactCollection"
-// import "./contactForm"
 import createContact from "./contact"
+// import "./contactForm"
+// import "./contactList"
 
 document.querySelector("#save_button").addEventListener("click", () => {
   let newContact = createContact()
@@ -8,5 +9,5 @@ document.querySelector("#save_button").addEventListener("click", () => {
 })
 
 document.querySelector("#get_button").addEventListener("click", () => {
-  console.log(getAllFromDatabase())
+  getAllFromDatabase()
 })

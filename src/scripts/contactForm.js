@@ -2,9 +2,12 @@
 // adds a new contact to storage. It should import the ContactCollection component.
 
 import postToDatabase from "./contactCollection"
-import createContact from "./contact";
+import createContact from "./contact"
 
 document.querySelector("#save_button").addEventListener("click", () => {
-  createContact(newContact)
+  let newContact = createContact()
   postToDatabase(newContact)
 })
+
+export default "./contactForm"
+
